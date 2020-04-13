@@ -1,0 +1,20 @@
+/* This will add the value of data-parent to the innerText before the rest of
+the copy.*/
+article::before {
+  content: attr(data-parent);
+}
+
+/* You can use it to apply styling as well. Data values are strings. Number values must be quoted in the selector for the styling to take effect. */
+article[data-columns="3"] {
+  width: 33%;
+}
+
+article[data-columns="5"] {
+  width: 50%;
+}
+
+/* Data attributes can also be stored to contain information that is constantly
+changing, like scores in a game. Using the CSS selectors and JavaScript access
+here this allows you to build some nifty effects without having to write your
+own display routines. See this screencast for an example using generated content
+and CSS transitions (JSBin example). Source: https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes */
